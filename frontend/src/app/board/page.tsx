@@ -12,9 +12,6 @@ export default function Board() {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [token, setToken] = useState<string | null>(null)
     const [showModal, setShowModal] = useState(false);
-
-
-
     useEffect(() => {
         const lsToken = localStorage.getItem("token");
 
@@ -49,9 +46,6 @@ export default function Board() {
             fetchTasks(token);
         }
     };
-
-
-
     // useEffect(() => {
     //     const lsToken = localStorage.getItem("token")
     //     setToken(lsToken)
