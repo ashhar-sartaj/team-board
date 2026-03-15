@@ -27,7 +27,7 @@ export default function TaskCreation({ close, refresh, task }: Props) {
         try {
 
             if (task) {
-                // EDIT TASK
+                // if task is there.. then edit
                 await api.put(`/tasks/${task._id}`, {
                     title,
                     description,
@@ -35,7 +35,7 @@ export default function TaskCreation({ close, refresh, task }: Props) {
                     assignedTo
                 }, {headers: {Authorization: `Bearer ${token}`}})
             } else {
-                // CREATE TASK
+                // if task is not there.. then create
                 await api.post("/tasks/create", {
                     title,
                     description,

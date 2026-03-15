@@ -102,7 +102,7 @@ npm start
 The backend entry file is:
 
 ```
-src/server.ts with root directory set to backend
+src/server.ts with **root directory** set to **backend**
 ```
 
 ---

@@ -74,7 +74,7 @@ export default function Register() {
         />
 
         <button
-          className="w-full bg-blue-500 text-white py-2 rounded"
+          className="w-full bg-white border-2 border-black text-black py-2 px-6 cursor-pointer"
         >
           Register
         </button>

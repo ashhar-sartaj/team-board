@@ -57,14 +57,18 @@ export default function TaskCard({ task, refresh }: Props) {
                 Assigned to: {task.assignedTo || "Unassigned"}
             </p>
 
-            <div className="flex gap-2 mt-3">
+            <p className="text-xs text-gray-500 mt-2">
+                Move to:
+            </p>
+
+            <div className="flex gap-2 mt-1">
 
                 {task.status !== "todo" && (
                     <button
                         onClick={() => updateStatus("todo")}
                         className="text-xs bg-gray-200 px-2 py-1 rounded cursor-pointer"
                     >
-                        Move to ToDo
+                        ToDo
                     </button>
                 )}
 
@@ -73,7 +77,7 @@ export default function TaskCard({ task, refresh }: Props) {
                         onClick={() => updateStatus("in-progress")}
                         className="text-xs bg-yellow-200 px-2 py-1 rounded cursor-pointer"
                     >
-                        Move to In-Progress
+                        In-Progress
                     </button>
                 )}
 
@@ -82,7 +86,7 @@ export default function TaskCard({ task, refresh }: Props) {
                         onClick={() => updateStatus("done")}
                         className="text-xs bg-green-200 px-2 py-1 rounded cursor-pointer"
                     >
-                        Move to Done
+                        Done
                     </button>
                 )}
 
@@ -90,7 +94,7 @@ export default function TaskCard({ task, refresh }: Props) {
 
             <button
                 onClick={deleteTask}
-                className="text-xs bg-red-400 text-white px-2 py-1 m-2 rounded cursor-pointer"
+                className="text-xs bg-red-400 text-white px-2 py-1 rounded cursor-pointer"
             >
                 Delete
             </button>
